@@ -1,0 +1,1 @@
+Search.setIndex({docnames:["index"],envversion:53,filenames:["index.rst"],objects:{},objnames:{},objtypes:{},terms:{index:0,modul:0,zoekpagina:0},titles:["Welcome to Grondslagen\u2019s documentation!"],titleterms:{and:0,documentation:0,grondslag:0,indices:0,tables:0,welcom:0}})
