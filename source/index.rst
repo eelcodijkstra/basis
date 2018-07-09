@@ -10,6 +10,7 @@ Welkom bij Grondslagen
    :maxdepth: 4
 
    inleiding.rst
+   eindige-automaten.rst
    todo.rst
 
 
