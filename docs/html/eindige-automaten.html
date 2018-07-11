@@ -42,7 +42,10 @@
 <h3>Navigatie</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Eindige automaten</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Eindige automaten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#digitale-schakelingen">Digitale schakelingen</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="todo.html">ToDo</a></li>
 </ul>
 
@@ -178,6 +181,19 @@ Dan komen we in het gebied van de nondeterministische automaten;
 deze zullen we later bespreken.</p>
 </li>
 </ul>
+<p>Voorbeeld: snoepautomaat</p>
+<p>Als volgende voorbeeld geven we een snoepautomaat. Deze heeft als invoer:
+munten (50 cent en 100 cent) en keuzeknoppen (Ka en Kb).
+Met een keuzeknop kun je een product kiezen: als je voldoende geld ingeworpen hebt, krijg je het gekozen product (Pa of Pb).
+Als je nog onvoldoende geld ingeworpen hebt, doet de keuzeknop niets.
+Deze snoepautomaat kunnen we beschijven met de volgende eindige automaat:</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/FSM-snoep.png"><img alt="figuur: snoep-FSM" src="_images/FSM-snoep.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Figuur 3</span></p>
+</div>
+<p><strong>Opdracht:</strong> Ga na wat de betekenis is van de verschillende toestanden.</p>
+<p><strong>Opdracht:</strong> Het product Pb wordt duurder: het kost geen 150 cent maar 200 cent.
+Pas de automaat aan voor deze prijsverhoging.</p>
 <p>Eindige automaten komen we overal tegen in de informatica en de ICT:</p>
 <ul class="simple">
 <li>een computer bevat op het laagste niveau veel schakelingen die een eindige automaat voorstellen;</li>
@@ -193,6 +209,22 @@ Eigenlijk zijn dit eenvoudige algoritmen: je hebt hiervoor geen programmeertaal 
 <li>herkennen van postcode</li>
 <li>berekenen van pariteit</li>
 </ul>
+<div class="section" id="digitale-schakelingen">
+<h2>Digitale schakelingen<a class="headerlink" href="#digitale-schakelingen" title="Permalink naar deze titel">¶</a></h2>
+<p>We kunnen een eindige automaat op een systematische manier omzetten in een digitale schakeling.
+Als voorbeeld gebruiken we de snoepautomaat.</p>
+<p>Een eindige automaat als digitale schakeling ziet er als volgt uit:</p>
+<p>Hierin is F een functie die afhangt van de toestand en het inputsymbool;
+deze levert als resultaat twee waarden: de nieuwe toestand en het outputsymbool.
+We kunnen deze functie F maken als “random logic”;
+een andere eenvoudige en universele manier is om hiervoor een geheugen (read-only memory, ROM) te gebruiken.
+Dit geheugen bevat dan een opsomming van de waarden van de functie voor de verschillende inputwaarden:
+deze inputwaarden gebruiken we als adres om toegang te krijgen tot de opgeslagen functiewaarde.</p>
+<p>Het geheugen moeten we dan eenmalig programmeren met de waarden uit de functietabel</p>
+<p>De eerste stap is om een tabel te maken voor de toestandsovergangen:</p>
+<p>input x toestand =&gt; output x toestand</p>
+<p>We nummeren de toestanden, de inputsymbolen en de outputsymbolen.</p>
+</div>
 </div>
 
 
