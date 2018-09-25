@@ -136,6 +136,26 @@ Voorbeelden:
 * verkeerslicht
 * herkennen van postcode
 * berekenen van pariteit
+* website
+
+Websites en het web
+===================
+
+Je kunt een website ook opvatten als een eindige automaat:
+de pagina's zijn de toestanden, en de verwijzingen zijn de toestandsovergangen.
+
+Je kunt zelfs het hele web op deze manier als een eindige automaat beschouwen.
+Je kunt dan proberen aan elke uitgaande link van een webpagina een waarschijnlijkheid toe te kennen.
+
+Je kunt dan proberen een kans toe te kennen aan elke webpagina:
+de kans dat iemand deze pagina bezoekt.
+
+Op dezelfde manier kun je kansen toekennenn aan de toestandsovergangen:
+
+Een dergelijke automaat waaraan je kansen toekent aan toestanden en aan toestandsovergangen heet wel een Markov-
+
+Dit is het principe achter het oorspronkelijke algoritme van Google:
+
 
 Digitale schakelingen
 =====================

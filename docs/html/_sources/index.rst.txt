@@ -11,6 +11,8 @@ Welkom bij Grondslagen
 
    inleiding.rst
    eindige-automaten.rst
+   bomen.ipynb
+   talen.rst
    todo.rst
 
 

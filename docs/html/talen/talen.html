@@ -1,0 +1,335 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Talen en grammatica’s &#8212; Grondslagen  documentatie</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Grondslagen</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigatie</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../inleiding.html">Inleiding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eindige-automaten.html">Eindige automaten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bomen.html">Bomen en boomstructuren</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../talen.html">Talen en grammatica’s</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">ToDo</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Snel zoeken</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Zoek" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="Talen-en-grammatica’s">
+<h1>Talen en grammatica’s<a class="headerlink" href="#Talen-en-grammatica’s" title="Permalink naar deze titel">¶</a></h1>
+<p>Een taal bestaat een verzameling <em>zinnen</em>. Dit geldt zowel voor een
+natuurlijke taal zoals het Nederlands, als voor een programmeertaal. Het
+aantal zinnen in een taal is erg groot; dit kan zelfs oneindig zijn. Het
+is handig als je een <em>beknopte beschrijving</em> van een taal hebt die
+aangeeft wat de geldige zinnen in de taal zijn, en wat is de betekenis
+daarvan is. In het geval van programmeertalen is zo’n beschijving zelfs
+essentieel: het moet zowel voor de menselijke gebruikers van de taal als
+voor de computer volstrekt duidelijk zijn wat een geldig programma is,
+en wat een geldig programma betekent.</p>
+<p>Een beschrijving van een natuurlijke taal als het Nederlands is lastig:
+je hebt hiervoor tenminste een woordenboek nodig met alle woorden en een
+grammatica (syntax). En daarnaast nog een grote verzameling van vaste
+uitdrukkingen, spreekwoorden en gezegdes, en lijsten met uitzonderingen.</p>
+<p>Een beschrijving van een programmeertaal kan veel beknopter: het aantal
+woorden is erg beperkt, de regels zijn (naar verhouding) eenvoudig, en
+er zijn (als de taal goed ontworpen is) weinig speciale gevallen en
+uitzonderingen. Maar omdat een programmeertaal vaak een historie heeft,
+waarin soms onhandige keuzes gemaakt zijn, heb je ook in
+programmeertalen te maken met uitzonderingen en speciale gevallen.</p>
+<div class="section" id="Geldig-versus-correct">
+<h2>Geldig versus correct<a class="headerlink" href="#Geldig-versus-correct" title="Permalink naar deze titel">¶</a></h2>
+<p>Een zin is een reeks woorden en andere symbolen zoals leestekens. Maar
+niet elke reeks woorden en leestekens is een geldige Nederlandse zin.
+Een geldige zin in het Nederlands is een zin die grammaticaal klopt. Je
+begrijpt dan wat de betekenis van die zin is.</p>
+<p>De zin “<em>maan kaas</em>” is geen geldige Nederlandse zin. Het is een on-zin:
+je kunt hier geen betekenis aan toekennen.</p>
+<p>Aan een geldige zin kun je een betekenis toekennen. Maar die betekenis
+kan best onzin zijn, zoals in “<em>De maan is van kaas.</em>” In een
+fantasieverhaal zou zo’n zin nog kunnen, maar in een “serieuze” tekst
+probeer je zinnen te gebruiken waarvan de betekenis geen onzin is.</p>
+<p>Op eenzelfde manier is een <em>geldig programma</em> een programma waarvan de
+computer weet hoe dit uitgevoerd moet worden. Maar daarmee hoeft het
+geen <em>correct programma</em> te zijn: het kan een foutief antwoord geven.
+Als je een sorteerprogramma maakt, dan moet je er niet alleen voor
+zorgen dat dit door de computer uitgevoerd kan worden. Je moet er ook
+voor zorgen dat deze uitvoering altijd het bedoelde resultaat geeft: een
+gesorteerde versie van de input.</p>
+<div class="section" id="Opdracht">
+<h3>Opdracht<a class="headerlink" href="#Opdracht" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>geef een voorbeeld van een Nederlandse on-zin: een opeenvolging van
+woorden die geen goede Nederlandse zin vormt.</li>
+<li>geef een voorbeeld van een geldige Nederlandse zin waarvan de
+betekenis onzin is.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="Structuur">
+<h2>Structuur<a class="headerlink" href="#Structuur" title="Permalink naar deze titel">¶</a></h2>
+<p>Zoals eerder gezegd: een zin is een reeks woorden en leestekens - maar
+niet elke reeks is een geldige zin in een bepaalde taal. Door middel van
+een grammatica (syntax) van een taal beschrijven we welke reeksen
+geldige zinnen in die taal zijn. Een grammatica bevat <em>regels</em> om de
+structuur van geldige zinnen te beschrijven.</p>
+<p>Dit geldt zowel voor natuurlijke talen als voor programmeertalen.</p>
+<p>Een grammatica beschrijft bovendien de <em>structuur</em> van een zin: uit
+welke onderdelen bestaat deze zin, en wat is de relatie tussen deze
+onderdelen?</p>
+<p>De structuur van een zin hangt nauw samen met de betekenis van deze zin.
+Dezelfde woorden in een andere structuur geeft een andere betekenis.</p>
+<blockquote>
+<div>Dit is ook de reden waarom je op school leert de structuur van
+Nederlandse zinnen te <em>ontleden</em>: je kunt dan de verschillende
+onderdelen van een zin benoemen, en daarmee de rol van die onderdelen
+in de betekenis begrijpen.</div></blockquote>
+<blockquote>
+<div>Bij het vak Nederlands gebruik je vaak twee soorten ontleden:
+<em>taalkundig</em> en <em>redekundig</em> ontleden. Bij taalkundig ontleden
+beschrijf je de <em>woordsoort</em> van de woorden, bijvoorbeeld: <code class="docutils literal notranslate"><span class="pre">de</span></code> -
+lidwoord, <code class="docutils literal notranslate"><span class="pre">grote</span></code> - bijvoeglijk naamwoord, <code class="docutils literal notranslate"><span class="pre">hond</span></code> - zelfstandig
+naamwoord. Bij <em>redekundig ontleden</em> gaat het om de <em>rol</em> van de
+verschillende onderdelen in een zin: bijvoorbeeld in
+<code class="docutils literal notranslate"><span class="pre">de</span> <span class="pre">grote</span> <span class="pre">hond</span> <span class="pre">bijt</span> <span class="pre">de</span> <span class="pre">kat</span></code> is <code class="docutils literal notranslate"><span class="pre">de</span> <span class="pre">grote</span> <span class="pre">hond</span></code> het onderwerp,
+<code class="docutils literal notranslate"><span class="pre">bijt</span></code> het gezegde, en <code class="docutils literal notranslate"><span class="pre">de</span> <span class="pre">kat</span></code> het lijdend voorwerp.</div></blockquote>
+<ul class="simple">
+<li><a class="reference external" href="http://wp.digischool.nl/nederlands/home/taalkundig-ontleden-woordsoorten/">http://wp.digischool.nl/nederlands/home/taalkundig-ontleden-woordsoorten/</a></li>
+<li><a class="reference external" href="http://wp.digischool.nl/nederlands/home/ontleden-redekundig-taalkundig/">http://wp.digischool.nl/nederlands/home/ontleden-redekundig-taalkundig/</a></li>
+</ul>
+</div>
+<div class="section" id="Samengestelde-vormen">
+<h2>Samengestelde vormen<a class="headerlink" href="#Samengestelde-vormen" title="Permalink naar deze titel">¶</a></h2>
+<p>Een woord of een leesteken kun je zien als een enkelvoudige vorm. Er
+zijn verschillende soorten enkelvoudige vormen. In een natuurlijke taal
+heb je bijvoorbeeld zelfstandige naamwoorden, lidwoorden, werkwoorden,
+voorzetsels, voegwoorden, punten, komma’s, enz. In een programmeertaal
+heb je getallen, namen voor variabelen en functies, symbolen als <code class="docutils literal notranslate"><span class="pre">;</span></code>
+en <code class="docutils literal notranslate"><span class="pre">,</span></code> enz.</p>
+<p>Daarnaast heb je manieren nodig om samengestelde vormen te maken. In een
+natuurlijke taal heb je daarvoor de opeenvolging (volgorde) van de
+woorden, en bijvoorbeeld voegwoorden en leestekens. In een
+programmeertaal heb je daarvoor bijvoorbeeld opeenvolging (<code class="docutils literal notranslate"><span class="pre">;</span></code>), keuze
+(<code class="docutils literal notranslate"><span class="pre">if</span></code>), herhaling (<code class="docutils literal notranslate"><span class="pre">for</span></code>, <code class="docutils literal notranslate"><span class="pre">while</span></code>), en functies. De regels in de
+grammatica beschrijven hoe je deze samengestelde vormen maakt uit de
+enkelvoudige vormen.</p>
+</div>
+<div class="section" id="Syntaxdiagrammen">
+<h2>Syntaxdiagrammen<a class="headerlink" href="#Syntaxdiagrammen" title="Permalink naar deze titel">¶</a></h2>
+<p>De symbolen die in de zinnen van een taal kunnen voorkomen noemen we de
+<em>eindsymbolen</em> van die taal. Een verzameling symbolen noemen we ook wel
+een <em>alfabet</em>.</p>
+<p>De syntaxregels van die taal beschrijven hoe we deze eindsymbolen kunnen
+combineren tot geldige zinnen. regels van de</p>
+<p>De regels van een grammatica, waarmee we beschrijven wat geldige zinnen
+zijn, kunnen we op verschillende manieren beschrijven. Een
+<em>syntaxdiagram</em> is een grafische notatie voor syntaxregels.</p>
+<ul class="simple">
+<li>een syntaxdiagram beschrijft een taal - alle zinnen in die taal, en
+de structuur van deze zinnen;</li>
+<li>vb: eenvoudige “natuurlijke” taal, subset van Nederlands</li>
+<li>vb: eenvoudige programmeertaal</li>
+</ul>
+<ul class="simple">
+<li>Overeenkomst/verschil tussen eindige automaat en syntaxdiagram?</li>
+</ul>
+<p>Een syntaxdiagram bestaat uit een aantal <em>regels</em>. Elke regel bestaat
+uit een diagram dat gelabeld is met een hulpsymbool. Je kunt dit
+hulpsymbool beschouwen als de naam van die regel. Dit hulpsymbool staat
+ook voor alle <em>zinsvormen</em> die met die regel gemaakt kunnen worden. Een
+<em>zinsvorm</em> is een reeks die bestaat uit eindsymbolen en hulpmsymbolen.</p>
+<p>Aan de ene kant is het lastig om zonder namen (hulpsymbolen) de
+structuur te beschrijven. Aan de andere kant geven deze namen vaak een
+hint voor de betekenis.</p>
+</div>
+<div class="section" id="Mogelijke-opdrachten">
+<h2>Mogelijke opdrachten<a class="headerlink" href="#Mogelijke-opdrachten" title="Permalink naar deze titel">¶</a></h2>
+<p>Opdrachten uitwerken. De opdrachten kunnen van de vorm zijn:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">gegeven</span> <span class="n">een</span> <span class="n">syntaxdiagram</span><span class="p">,</span> <span class="n">genereer</span> <span class="mi">3</span> <span class="n">verschillende</span> <span class="n">zinnen</span>
+<span class="o">*</span> <span class="n">gegeven</span> <span class="n">een</span> <span class="n">syntaxdiagram</span> <span class="n">en</span> <span class="n">een</span> <span class="n">zin</span><span class="p">,</span> <span class="n">ga</span> <span class="n">na</span> <span class="n">of</span> <span class="n">deze</span> <span class="n">zin</span> <span class="n">element</span> <span class="n">van</span> <span class="n">de</span> <span class="n">taal</span> <span class="ow">is</span>
+<span class="o">*</span> <span class="n">gegeven</span> <span class="n">een</span> <span class="n">syntaxdiagram</span> <span class="n">en</span> <span class="n">een</span> <span class="n">zin</span><span class="p">,</span> <span class="n">maak</span> <span class="n">een</span> <span class="n">ontleedboom</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Opmerkingen">
+<h2>Opmerkingen<a class="headerlink" href="#Opmerkingen" title="Permalink naar deze titel">¶</a></h2>
+<p>Uitwerken van deze opmerkingen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">we</span> <span class="n">hebben</span> <span class="n">hier</span> <span class="n">ook</span> <span class="n">weer</span> <span class="n">te</span> <span class="n">maken</span> <span class="n">met</span> <span class="o">*</span><span class="n">vorm</span><span class="o">*</span> <span class="n">en</span> <span class="o">*</span><span class="n">betekenis</span><span class="o">*</span>
+<span class="o">*</span> <span class="n">niet</span> <span class="n">alle</span> <span class="n">vormen</span> <span class="n">zijn</span> <span class="s2">&quot;geldige vormen&quot;</span>
+<span class="o">*</span> <span class="n">alleen</span> <span class="n">van</span> <span class="n">geldige</span> <span class="n">vormen</span> <span class="n">kunnen</span> <span class="n">we</span> <span class="n">de</span> <span class="n">betekenis</span> <span class="n">bepalen</span>
+<span class="o">*</span> <span class="n">deze</span> <span class="n">betekenis</span> <span class="n">hangt</span> <span class="n">samen</span> <span class="n">met</span> <span class="n">de</span> <span class="n">structuur</span> <span class="n">van</span> <span class="n">de</span> <span class="n">vorm</span><span class="p">:</span> <span class="n">de</span> <span class="n">manier</span> <span class="n">waarop</span> <span class="n">de</span> <span class="n">delen</span> <span class="n">samengevoegd</span> <span class="n">zijn</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">een</span> <span class="n">zin</span> <span class="ow">is</span> <span class="n">een</span> <span class="n">opeenvolging</span> <span class="n">van</span> <span class="n">woorden</span><span class="p">;</span> <span class="n">niet</span> <span class="n">alleen</span> <span class="n">de</span> <span class="n">woorden</span> <span class="n">zelf</span> <span class="n">maar</span> <span class="n">ook</span> <span class="n">de</span> <span class="n">volgorde</span> <span class="n">van</span> <span class="n">de</span> <span class="n">woorden</span> <span class="n">bepaalt</span> <span class="n">de</span> <span class="n">betekenis</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">onder</span> <span class="n">deze</span> <span class="n">volgorde</span> <span class="n">ligt</span> <span class="n">een</span> <span class="n">structuur</span><span class="o">.</span> <span class="n">Een</span> <span class="n">zin</span> <span class="n">bestaat</span> <span class="n">uit</span> <span class="n">onderdelen</span> <span class="n">die</span> <span class="n">een</span> <span class="n">bepaalde</span> <span class="n">verhouding</span> <span class="n">tot</span> <span class="n">elkaar</span> <span class="n">hebben</span><span class="p">,</span> <span class="n">en</span> <span class="n">die</span> <span class="ow">in</span> <span class="n">de</span> <span class="n">zin</span> <span class="n">een</span> <span class="n">bepaalde</span> <span class="n">rol</span> <span class="n">spelen</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">een</span> <span class="n">ander</span> <span class="n">voorbeeld</span> <span class="n">van</span> <span class="n">een</span> <span class="n">soort</span> <span class="n">grammatica</span> <span class="ow">is</span> <span class="n">wat</span> <span class="n">we</span> <span class="n">zien</span> <span class="n">bij</span> <span class="s2">&quot;blokjestalen&quot;</span> <span class="o">-</span> <span class="n">zoals</span> <span class="n">Scratch</span><span class="o">.</span>
+<span class="n">Ook</span> <span class="n">daar</span> <span class="n">komen</span> <span class="n">we</span> <span class="n">recursieve</span> <span class="n">structuren</span> <span class="n">tegen</span><span class="p">,</span> <span class="n">bijvoorbeeld</span> <span class="n">voor</span> <span class="n">expressies</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">gebruik</span> <span class="n">van</span> <span class="n">boekje</span> <span class="n">van</span> <span class="n">Jan</span> <span class="n">Lepeltak</span> <span class="p">(</span><span class="n">De</span> <span class="n">Taalkist</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Voorbeeld:-Expr">
+<h2>Voorbeeld: Expr<a class="headerlink" href="#Voorbeeld:-Expr" title="Permalink naar deze titel">¶</a></h2>
+<p>We geven hier een voorbeeld van een eenvoudige expressietaal.</p>
+<p>Een expressie (<code class="docutils literal notranslate"><span class="pre">Expr</span></code>) is een reeks termen verbonden door <code class="docutils literal notranslate"><span class="pre">+</span></code> of
+<code class="docutils literal notranslate"><span class="pre">-</span></code> operatoren. Voorbeelden van Expr zijn dan: <code class="docutils literal notranslate"><span class="pre">Term</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Term</span> <span class="pre">-</span> <span class="pre">Term</span></code>, <code class="docutils literal notranslate"><span class="pre">Term</span> <span class="pre">+</span> <span class="pre">Term</span> <span class="pre">+</span> <span class="pre">Term</span></code>, enz.</p>
+<p>Een term (<code class="docutils literal notranslate"><span class="pre">Term</span></code>) is een reeks factoren verbonden door <code class="docutils literal notranslate"><span class="pre">*</span></code> of <code class="docutils literal notranslate"><span class="pre">/</span></code>
+operatoren. Voorbeelden van Term zijn dan: <code class="docutils literal notranslate"><span class="pre">Factor</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Factor</span> <span class="pre">*</span> <span class="pre">Factor</span></code>, <code class="docutils literal notranslate"><span class="pre">Factor</span> <span class="pre">*</span> <span class="pre">Factor</span> <span class="pre">/</span> <span class="pre">Factor</span></code>, enz.</p>
+<p>Een factor (<code class="docutils literal notranslate"><span class="pre">Factor</span></code>) is een getal (<code class="docutils literal notranslate"><span class="pre">Number</span></code>), een variabele
+(<code class="docutils literal notranslate"><span class="pre">Variable</span></code>), of een <code class="docutils literal notranslate"><span class="pre">Expr</span></code> tussen haakjes. Voorbeelden van
+<code class="docutils literal notranslate"><span class="pre">Factor</span></code> zijn dan <code class="docutils literal notranslate"><span class="pre">Number</span></code>, <code class="docutils literal notranslate"><span class="pre">(Expr)</span></code>.</p>
+<p>Je kunt uit een zinsvorm (met hulpsymbolen) een <em>zin</em> (met alleen
+eindsymbolen) door alle hulpsymbolen hierin te vervangen door hun
+“expansie” volgens de regel van dat hulpsymbool. Als je dat dat voor
+stap doet, zoals hieronder, spreken we ook wel van een <em>afleiding</em>.</p>
+<p><strong>Voorbeeld</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Expr</span> <span class="o">-&gt;</span>
+<span class="n">Term</span> <span class="o">+</span> <span class="n">Term</span> <span class="o">-&gt;</span>
+<span class="n">Factor</span> <span class="o">+</span> <span class="n">Term</span> <span class="o">-&gt;</span>
+<span class="n">Factor</span> <span class="o">+</span> <span class="n">Factor</span> <span class="o">*</span> <span class="n">Factor</span> <span class="o">-&gt;</span>
+<span class="n">Number</span> <span class="o">+</span> <span class="n">Factor</span> <span class="o">*</span> <span class="n">Factor</span> <span class="o">-&gt;</span>
+<span class="n">Number</span> <span class="o">+</span> <span class="n">Number</span> <span class="o">*</span> <span class="n">Factor</span> <span class="o">-&gt;</span>
+<span class="n">Number</span> <span class="o">+</span> <span class="n">Number</span> <span class="o">*</span> <span class="n">Variable</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Voorbeeld:-HTML-lijsten">
+<h1>Voorbeeld: HTML-lijsten<a class="headerlink" href="#Voorbeeld:-HTML-lijsten" title="Permalink naar deze titel">¶</a></h1>
+<p>In HTML heb je twee mogelijke vormen van opsomming: een ongeordende
+lijst (<code class="docutils literal notranslate"><span class="pre">ul</span></code>) en de geordende lijst (<code class="docutils literal notranslate"><span class="pre">ol</span></code>). De eerste resulteert
+meestal in een lijst met “bullets”, de tweede in een genummerde lijst.</p>
+<p>We geven hieronder de syntaxdiagrammen voor deze opsommingen.</p>
+<p>Een geordende lijst (OrderedList) bestaat uit het haakjespaar
+<code class="docutils literal notranslate"><span class="pre">&lt;ol&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/ol&gt;</span></code>, met daartussen 0 of meer ListItems. Een lijst met
+ListItems kan leeg zijn: in dat geval heb je alleen de haakjes
+<code class="docutils literal notranslate"><span class="pre">&lt;ol&gt;</span> <span class="pre">&lt;/ol&gt;</span></code>.</p>
+<p>Een ongeordende lijst (UnorderedList) bestaat uit het haakjespaar
+<code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/ul&gt;</span></code> met daartussen 0 of meer ListItems.</p>
+<p>Een ListItem bestaat uit het haakjespaar <code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/li&gt;</span></code> met
+daartussen een Item.</p>
+<p>Een Item is een OrderedList, of een UnorderedList, of een OtherItem. Een
+voorbeeld van een OtherItem is een “normale” tekst.</p>
+<p>Merk op dat een Item ook weer een OrderedList of UnorderedList kan zijn:
+dit betekent dat we deze deelstructuren kunnen <em>nesten</em>, bijvoorbeeld
+een geordende lijst als element in een geordende lijst.</p>
+<p>Een voorbeeld van een ongeordende lijst:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span> <span class="n">huisje</span> <span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span> <span class="n">boompje</span> <span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span> <span class="n">beestje</span> <span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul><li><p>huisje</p>
+</li><li><p>boompje</p>
+</li><li><p>beestje</p>
+</li></ul><p><strong>Opdracht</strong>: geef een aantal voorbeelden van een UnorderedList. Geef
+tenminste één voorbeeld van <em>nesting</em>, waarbij je een lijst binnen een
+lijst gebruikt.</p>
+<p>Laat van één voorbeeld zien hoe je dit kunt afleiden via de
+syntaxdiagrammen.</p>
+<p><strong>Opdracht</strong>: demonstreer deze voorbeelden in een HTML-pagina.</p>
+<div class="section" id="Voorbeeld:-Nederlands">
+<h2>Voorbeeld: Nederlands<a class="headerlink" href="#Voorbeeld:-Nederlands" title="Permalink naar deze titel">¶</a></h2>
+<p>Voorbeeld van syntaxdiagrammen voor eenvoudige Nederlandse zinnen.</p>
+<p>(En mogelijk: voorbeeld van een Haiku-generator?)</p>
+</div>
+<div class="section" id="Ontleedbomen">
+<h2>Ontleedbomen<a class="headerlink" href="#Ontleedbomen" title="Permalink naar deze titel">¶</a></h2>
+<p>We kunnen de afleiding van een zin met behulp van de syntaxregels ook op
+een grafische manier weergeven, in de vorm van een boom. We spreken dan
+van een <em>ontleedboom</em>. Zo’n ontleedboom laat de structuur van een zin
+zien. Bovendien kun je deze gebruiken om de betekenis van de zin
+duidelijk te maken.</p>
+<p>Programma voor het tekenen van ontleedbomen: <a class="reference external" href="http://mshang.ca/syntree/">http://mshang.ca/syntree/</a></p>
+<p>In het voorbeeld hieronder zie je de ontleedboom van de eerder gegeven
+afleiding. Aan de hand van deze ontleedboom kunnen we de betekenis van
+de expressie - dat wil zeggen, de expressie uitrekenen. Je ziet hier aan
+de boom dat “vermenigvuldigen voor optellen gaat”: dit is in de
+syntaxdiagrammen vastgelegd.</p>
+<div class="section" id="Voorbeeld:-ontleedboom">
+<h3>Voorbeeld: ontleedboom<a class="headerlink" href="#Voorbeeld:-ontleedboom" title="Permalink naar deze titel">¶</a></h3>
+<p>voorbeeld van een ontleedboom van een Nederlandse zin.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2018, Eelco Dijkstra.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/talen/talen.ipynb.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,535 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Grondslagen &#8212; Grondslagen  documentatie</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Grondslagen</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigatie</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../inleiding.html">Inleiding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eindige-automaten.html">Eindige automaten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bomen.html">Bomen en boomstructuren</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../talen.html">Talen en grammatica’s</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">ToDo</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Snel zoeken</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Zoek" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="Grondslagen">
+<h1>Grondslagen<a class="headerlink" href="#Grondslagen" title="Permalink naar deze titel">¶</a></h1>
+<p>Twee delen:</p>
+<ul class="simple">
+<li>eerst “unplugged”</li>
+<li>dan combineren met programmeerkennis<ul>
+<li>hiervoor kunnen we mogelijk Notebooks gebruiken?</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="Informatie-en-data">
+<h2>Informatie en data<a class="headerlink" href="#Informatie-en-data" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="Informatie:-vorm-en-betekenis">
+<h3>Informatie: vorm en betekenis<a class="headerlink" href="#Informatie:-vorm-en-betekenis" title="Permalink naar deze titel">¶</a></h3>
+<p>Informatie bestaat uit twee delen:</p>
+<ul class="simple">
+<li>vorm</li>
+<li>manier om deze vorm betekenis te geven (“interpreteren”)</li>
+</ul>
+<p>Vorm is (uiteindelijk) fysiek; heeft een fysieke drager nodig.</p>
+<p>Informatie gaat verloren:</p>
+<ul class="simple">
+<li>als de vorm (of de fysieke drager daarvan) verloren gaat;<ul>
+<li>(bijv.: overschrijven van de bits; of verbranden van de
+USB-stick).</li>
+</ul>
+</li>
+<li>als de manier om de vorm te interpreteren verloren gaat<ul>
+<li>bijv.: apparaat om drager te lezen</li>
+<li>of: software om data-formaat te lezen</li>
+<li>ook klassiek: vgl. vormen die we in de archeologie vinden.</li>
+</ul>
+</li>
+</ul>
+<p>Je kunt vormen onbeperkt kopiëren - zonder verlies aan informatie.</p>
+<p>Informatie heeft geen <em>behoudswet</em>, zoals energie of materie. Dit
+betekent:</p>
+<ul class="simple">
+<li>informatie kan verloren gaan;<ul>
+<li>“rekenen” is zelfs een proces waarbij informatie verloren gaat.</li>
+</ul>
+</li>
+<li>er kan informatie bij komen…</li>
+</ul>
+<div class="section" id="Getallen">
+<h4>Getallen<a class="headerlink" href="#Getallen" title="Permalink naar deze titel">¶</a></h4>
+<ul class="simple">
+<li>verschil tussen <em>getal</em> (als abstract, wiskundig begrip) en de
+<em>vorm</em>.</li>
+<li>eenzelfde getal kun je op verschillende manieren voorstellen.</li>
+<li>verandert niets aan de (wiskundige) eigenschappen van het getal<ul>
+<li>bijv.: even/oneven; welke priemfactoren; enz.</li>
+</ul>
+</li>
+<li>sommige vormen zijn handiger om mee te rekenen dan andere<ul>
+<li>bijv.: decimale notatie vs.&nbsp;latijnse notatie (representatie)</li>
+</ul>
+</li>
+<li>sommige vormen zijn voor computers handiger om mee te rekenen;<ul>
+<li>andere voor mensen</li>
+<li>bijv.: decimale vs.&nbsp;binaire notatie; hex. notatie (als compromis?)</li>
+</ul>
+</li>
+</ul>
+<p>(Opm.: het is strikt genomen niet terecht om te spreken over “binaire
+getallen”: “binair” slaat op de vorm/notatie, niet op het getal.)</p>
+<p>Je kunt eenzelfde persoon ook verschillende namen geven; verandert niets
+aan de eigenschappen van die persoon.</p>
+<p>Dit betekent overigens niet dat die verschillende namen (vormen)
+gelijkwaardig zijn.</p>
+</div>
+</div>
+<div class="section" id="Universele-vormen">
+<h3>Universele vormen<a class="headerlink" href="#Universele-vormen" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>DNA; hersenen</li>
+<li>taal (gesproken taal; geluid als drager)</li>
+<li>geschreven taal; alfabet (symbolen; vgl. letters en teken-schrift -
+Chinees)</li>
+<li>bits</li>
+</ul>
+</div>
+<div class="section" id="Transformeren:-omzetten-van-vormen">
+<h3>Transformeren: omzetten van vormen<a class="headerlink" href="#Transformeren:-omzetten-van-vormen" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>interpreteren? (bijv. draaiorgel? afdrukken van een document?)</li>
+<li>“omrekenen”</li>
+<li>richting bij transformatie? zelfde, hoger of lager <em>semantisch
+niveau</em>?</li>
+<li>vgl. ook: interpreteren van sensordata; herkennen van patronen; en
+betekenis geven aan patronen.</li>
+</ul>
+<blockquote>
+<div>Opmerkingen over patroonherkenning bij mensen; en “op hol geslagen
+patroonherkenning”, bijv. bij paranoia; complotdenken; gebruik van
+framing bij patroonherkenning en interpretatie.</div></blockquote>
+</div>
+<div class="section" id="Handige-vormen">
+<h3>Handige vormen<a class="headerlink" href="#Handige-vormen" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>sommige vormen zijn handiger in het gebruik (of voor een bepaald
+doel) dan andere.</li>
+<li>vb: decimale representatie van getallen</li>
+</ul>
+</div>
+<div class="section" id="Vormen-in-de-informatica">
+<h3>Vormen in de informatica<a class="headerlink" href="#Vormen-in-de-informatica" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>basisvormen: booleans; getallen; (letter)tekens en strings</li>
+<li>samenstellingen -&gt; Datastructuren</li>
+</ul>
+</div>
+<div class="section" id="Informatietechnologie">
+<h3>Informatietechnologie<a class="headerlink" href="#Informatietechnologie" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>menselijke samenleving draait om <em>informatietechnologie</em><ul>
+<li>ontwikkeling van informatietechnologie heeft grote invloed op de
+geschiedenis.</li>
+</ul>
+</li>
+<li>schrift</li>
+<li>boekdrukkunst</li>
+<li>telefoon, telegraaf</li>
+<li>radio, televisie</li>
+<li>grammofoon</li>
+<li>fax, fotokopieermachine</li>
+<li>computer</li>
+<li>encryptie, geheimschrift (en het ontsleutelen daarvan)</li>
+</ul>
+<p>NB: veel informatietechnologie (en de bijbehorende processen) berusten
+op het <em>reproduceren</em> van een vorm, al dan niet op afstand. Dit is
+eigenlijk “datatechnologie”. De interpretatie wordt helemaal gedaan door
+mensen. De betekenis van de vorm speelt in deze processen geen rol.</p>
+</div>
+<div class="section" id="Redundante-vormen">
+<h3>Redundante vormen<a class="headerlink" href="#Redundante-vormen" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>voordeel: bestand tegen beschadiging van delen van de vorm:
+reconstrueren van de oorspronkelijke vorm.</li>
+<li>nadeel: veranderingen van delen van een redundante vorm leiden tot
+inconsistenties (zie databases).</li>
+</ul>
+</div>
+<div class="section" id="Typering-in-programmeertalen">
+<h3>Typering in programmeertalen<a class="headerlink" href="#Typering-in-programmeertalen" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>hoe weet je of je een reeks bits moet opvatten als</li>
+<li>ook: typering van documenten: bijv. doc vs.&nbsp;xsl (gebruik van suffix)</li>
+<li></li>
+</ul>
+</div>
+<div class="section" id="Opmerkingen">
+<h3>Opmerkingen<a class="headerlink" href="#Opmerkingen" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>interpretatie gaat zo automatisch dat we ons er niet meer van bewust
+zijn;</li>
+<li>dit is ook een bron van misverstanden: omdat de interpretaties niet
+altijd zo eenduidig is.</li>
+<li>verschil met de fysische wereld: de vorm van een fiets is niet vrij,
+geen kwestie van afspraak.</li>
+<li>analoge vs.&nbsp;discrete vormen (ook in de biologie worden deze laatste
+veel gebruikt!)</li>
+</ul>
+<blockquote>
+<div>Meestal beschouwen we interpretatie als iets dat betekenis op een
+hoger niveau oplevert. Maar hoe begrijp je dan bijv. het
+interpreteren van een orgelboek door een draaiorgel?</div></blockquote>
+</div>
+<div class="section" id="Opdrachten">
+<h3>Opdrachten<a class="headerlink" href="#Opdrachten" title="Permalink naar deze titel">¶</a></h3>
+<div class="section" id="Voorbeelden-van-vormen-en-hun-interpretatie">
+<h4>Voorbeelden van vormen en hun interpretatie<a class="headerlink" href="#Voorbeelden-van-vormen-en-hun-interpretatie" title="Permalink naar deze titel">¶</a></h4>
+<ul class="simple">
+<li>vormen met verschillende interpretaties (ambiguïteit; en hoe deze op
+te lossen) - gebruik van de context.</li>
+<li></li>
+</ul>
+</div>
+<div class="section" id="Voorbeelden-van-informatietechnologie">
+<h4>Voorbeelden van informatietechnologie<a class="headerlink" href="#Voorbeelden-van-informatietechnologie" title="Permalink naar deze titel">¶</a></h4>
+<ul class="simple">
+<li>uit het pre-computer-tijdperk</li>
+<li>nb: er zijn ook heel veel “kleine” uitvindingen op dit gebied gedaan;
+zoals bijv. de ontwikkeling (uitvinding?) van het cursieve schrift;
+de ontwikkeling van “alfabetisch geordende lijsten” (en het zoeken
+daarin) - bijv. voor namenlijsten, woordenlijsten.; de uitvinding van
+de postzegel.</li>
+<li></li>
+</ul>
+</div>
+<div class="section" id="Andere-getalrepresentaties-(binair,-hex)">
+<h4>Andere getalrepresentaties (binair, hex)<a class="headerlink" href="#Andere-getalrepresentaties-(binair,-hex)" title="Permalink naar deze titel">¶</a></h4>
+<ul class="simple">
+<li>omrekenen van decimaal naar binair (en omgekeerd)</li>
+<li>van binair naar hexadecimaal (en omgekeerd)</li>
+<li>gebruik van hex-getallen: bijv. MAC-adres<ul>
+<li>dit zijn gee getallen om mee te rekenen: je gebruikt daar een
+getal als identificatie. Het heeft geen zin om IP-adressen in
+priemfactoren te ontbinden.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="Lettertekens">
+<h4>Lettertekens<a class="headerlink" href="#Lettertekens" title="Permalink naar deze titel">¶</a></h4>
+<ul class="simple">
+<li>getal (bitreeks) &lt;-&gt; letterteken</li>
+<li>hoe weet je of je een bitreeks als getal of als letterteken moet
+opvatten? -&gt; <em>typering</em> in programmeertalen. (en in databases;
+spreadsheets;</li>
+<li></li>
+</ul>
+</div>
+<div class="section" id="Pixels">
+<h4>Pixels<a class="headerlink" href="#Pixels" title="Permalink naar deze titel">¶</a></h4>
+<ul class="simple">
+<li>pixel als universele vorm: je kunt er elk mogelijk beeld mee maken
+(als je voldoende pixels hebt).</li>
+<li>cf.&nbsp;discrete karakter van receptoren in het oog.</li>
+<li>later: rekenen met pixels… (e.g.&nbsp;cellulaire automaten)</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="Betekenis-(representatie-en-interpretatie)-in-lagen">
+<h2>Betekenis (representatie en interpretatie) in lagen<a class="headerlink" href="#Betekenis-(representatie-en-interpretatie)-in-lagen" title="Permalink naar deze titel">¶</a></h2>
+<ul class="simple">
+<li>“betekenis” op 1 niveau kan de vorm zijn met een betekenis op een
+hoger niveau</li>
+<li>vaak groot aantal niveaus van vorm en betekenis</li>
+<li>“semantische ladder”</li>
+<li>voorbeelden uit het dagelijks leven?</li>
+<li>voorbeelden uit de ICT:<ul>
+<li>“protocolstack” bij communicatie.</li>
+<li>verschillende soorten figuren: pixels vs.&nbsp;pdf; pdf vs.&nbsp;word-doc.</li>
+</ul>
+</li>
+<li>van betekenis naar vorm: “eenvoudig”, ook voor computers</li>
+<li>van vorm naar betekenis: “moeilijk tot zeer moeilijk”; zeker voor
+computers<ul>
+<li>vgl. van word-doc naar PDF en van PDF naar word-doc.</li>
+<li>bij overgang van betekenis naar vorm gaat <em>informatie verloren</em></li>
+<li>vgl. ook het html-gebruik van “em(phasize)” vs. ” (semantische
+attributen?)</li>
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em</a></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div>Opmerking over <em>transformeren</em>?</div></blockquote>
+<div class="section" id="Opdrachten">
+<h3>Opdrachten<a class="headerlink" href="#Opdrachten" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>Maak een Word-doc; druk dit af; scan dit in; en probeer er weer een
+Word-document van te maken. Ga na wat de verschillen zijn met het
+oorspronkelijke document.<ul>
+<li>NB: dit werkt nog beter met een HTML-document, maar leerlingen
+hebben daar in dit stadium nog geen kennis van?</li>
+<li>Nog een suggestie: gebruik van <em>styles</em> in Word, bijvoorbeeld voor
+“exercise”-tekst?</li>
+<li>Je hebt hiervoor een programma nodig dat pixels om kan zetten in
+tekst; vb?</li>
+<li><a class="reference external" href="https://pdf2doc.com/nl/">https://pdf2doc.com/nl/</a></li>
+<li><a class="reference external" href="https://www.pdfonline.com/pdf-to-word-converter/">https://www.pdfonline.com/pdf-to-word-converter/</a></li>
+</ul>
+</li>
+<li>Idem voor een figuur, getekend met een vector-graphics programma.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="Opslaan-en-terugzoeken">
+<h2>Opslaan en terugzoeken<a class="headerlink" href="#Opslaan-en-terugzoeken" title="Permalink naar deze titel">¶</a></h2>
+</div>
+<div class="section" id="Communicatie">
+<h2>Communicatie<a class="headerlink" href="#Communicatie" title="Permalink naar deze titel">¶</a></h2>
+</div>
+<div class="section" id="Algoritmen-(rekenen;-“dataverwerking”)">
+<h2>Algoritmen (rekenen; “dataverwerking”)<a class="headerlink" href="#Algoritmen-(rekenen;-“dataverwerking”)" title="Permalink naar deze titel">¶</a></h2>
+<ul class="simple">
+<li>basisbegrippen (zie inl. programmeren)</li>
+<li>rekenen als “schuiven met vormen”<ul>
+<li>bij het rekenen gebruik je de vorm, niet de interpretatie als
+getal</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="Cellulaire-automaten">
+<h3>Cellulaire automaten<a class="headerlink" href="#Cellulaire-automaten" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>(deze geven een goed voorbeeld van het rekenen met vormen, zonder dat
+je enige betekenis aan de vormen geeft.)</li>
+</ul>
+</div>
+<div class="section" id="Voorbeeld:-zoeken">
+<h3>Voorbeeld: zoeken<a class="headerlink" href="#Voorbeeld:-zoeken" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>lineair zoeken (“linear search”)</li>
+<li>binair zoeken (“binary search”)</li>
+<li>voorbeeld: raad een getal onder de 100</li>
+<li>voorbeeld: zoeken in een rij getallen (of records)</li>
+<li>complexiteit (efficiëntie): aantal stappen als functie van het aantal
+elementen (“de grootte van het probleem”)</li>
+</ul>
+</div>
+<div class="section" id="Opmerkingen">
+<h3>Opmerkingen<a class="headerlink" href="#Opmerkingen" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>dit kunnen we (als proces) misschien beter “communiceren” noemen, als
+werkwoord.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="Eindige-automaten">
+<h2>Eindige automaten<a class="headerlink" href="#Eindige-automaten" title="Permalink naar deze titel">¶</a></h2>
+<ul class="simple">
+<li>eindige automaat als voorbeeld van algoritme</li>
+<li>eindige automaat voor herkennen en voor genereren</li>
+<li>verband met Markov ketens</li>
+<li>het web als “eindige automaat”: pagina als toestand en link als
+toestandsovergang</li>
+<li>Google’s algoritme (pagerank) en Markov chains.</li>
+</ul>
+</div>
+<div class="section" id="Datastructuren-en-algoritmen">
+<h2>Datastructuren en algoritmen<a class="headerlink" href="#Datastructuren-en-algoritmen" title="Permalink naar deze titel">¶</a></h2>
+<ul class="simple">
+<li>samenhang tussen structuur van data en structuur van programma dat
+deze data <em>verwerkt</em></li>
+<li></li>
+</ul>
+<div class="section" id="Records,-cartesisch-product">
+<h3>Records, cartesisch product<a class="headerlink" href="#Records,-cartesisch-product" title="Permalink naar deze titel">¶</a></h3>
+<p>(soms ook tupel)</p>
+<ul class="simple">
+<li>verwerking: opeenvolging</li>
+</ul>
+</div>
+<div class="section" id="Rijen-(arrays)">
+<h3>Rijen (arrays)<a class="headerlink" href="#Rijen-(arrays)" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>verwerking: herhaling (in het bijzonder: for, for all)</li>
+</ul>
+</div>
+<div class="section" id="Data-in-tabellen">
+<h3>Data in tabellen<a class="headerlink" href="#Data-in-tabellen" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>verwerking:</li>
+<li>vgl. ook databases, spreadsheets</li>
+</ul>
+</div>
+<div class="section" id="Bomen">
+<h3>Bomen<a class="headerlink" href="#Bomen" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>verwerking: recursie</li>
+</ul>
+</div>
+<div class="section" id="Abstracte-datatypes">
+<h3>Abstracte datatypes<a class="headerlink" href="#Abstracte-datatypes" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>verzamelingen e.d.</li>
+<li>combinatie van waarden en operaties op deze waarden.</li>
+<li>vgl. ook functie als abstractie van een berekening.</li>
+</ul>
+</div>
+<div class="section" id="Opmerkingen">
+<h3>Opmerkingen<a class="headerlink" href="#Opmerkingen" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>voorbeelden die we kunnen behandelen voordat we met programmeren
+beginnen:<ul>
+<li>bomen (inclusief recursie); verschillende soorten</li>
+<li>data in tabellen: vgl. spreadsheets.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="Talen-en-grammatica’s">
+<h2>Talen en grammatica’s<a class="headerlink" href="#Talen-en-grammatica’s" title="Permalink naar deze titel">¶</a></h2>
+<p>Taal (zin in een taal) heeft <em>structuur</em>. Dit geldt voor natuurlijke
+talen en programmeertalen. Deze structuur wordt gegeven door de syntax
+(grammatica). Deze structuur hangt nauw samen met de betekenis.</p>
+<div class="section" id="Syntaxdiagrammen">
+<h3>Syntaxdiagrammen<a class="headerlink" href="#Syntaxdiagrammen" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>een syntaxdiagram beschrijft een taal - alle zinnen in die taal, en
+de structuur van deze zinnen;</li>
+<li>vb: eenvoudige “natuurlijke” taal, subset van Nederlands</li>
+<li>vb: eenvoudige programmeertaal</li>
+<li>tekenen van syntaxdiagrammen:<ul>
+<li>railroad diagrams: <a class="reference external" href="https://github.com/tabatkins/railroad-diagrams">https://github.com/tabatkins/railroad-diagrams</a></li>
+<li>ebnf to ps: <a class="reference external" href="https://github.com/FranklinChen/Ebnf2ps">https://github.com/FranklinChen/Ebnf2ps</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="Ontleedbomen">
+<h3>Ontleedbomen<a class="headerlink" href="#Ontleedbomen" title="Permalink naar deze titel">¶</a></h3>
+<ul class="simple">
+<li>structuur van een zin gegeven in de vorm van een boom.</li>
+<li></li>
+<li>tekenen van ontleedbomen (syntax trees):<ul>
+<li><a class="reference external" href="http://ironcreek.net/phpsyntaxtree">http://ironcreek.net/phpsyntaxtree</a></li>
+<li><a class="reference external" href="http://www.tycho.iel.unicamp.br/phpsyntaxtree/">http://www.tycho.iel.unicamp.br/phpsyntaxtree/</a></li>
+<li><a class="reference external" href="http://mshang.ca/syntree/">http://mshang.ca/syntree/</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="Filosofische/fundamentele/praktische-vragen">
+<h2>Filosofische/fundamentele/praktische vragen<a class="headerlink" href="#Filosofische/fundamentele/praktische-vragen" title="Permalink naar deze titel">¶</a></h2>
+<ul class="simple">
+<li>wat zijn de grenzen aan rekenen?<ul>
+<li>wat zijn de fundamentele grenzen? (“onberekenbare functies”)</li>
+<li>wat zijn de praktische grenzen? (“complexiteit”: rekenen kost
+teveel tijd en/of ruimte - geheugen)</li>
+<li>gebruik van (bijv.) Turing machine om over deze grenzen te
+redeneren</li>
+</ul>
+</li>
+<li>wat zijn de grenzen aan communicatie?<ul>
+<li>hoe compact kun je een betekenis weergeven? (compressie)?</li>
+<li>hoe kun je een bericht betrouwbaar overbrengen? (gebruik van
+redundantie)</li>
+<li>hoe kun je een bericht veilig overbrengen of bewaren (encryptie)</li>
+</ul>
+</li>
+<li>kunnen computers denken?</li>
+<li>wat is denken?</li>
+<li>wat is bewustzijn?</li>
+<li>wat zijn de fundamentele verschillen en overeenkomsten tussen
+computers (robots) en mensen?<ul>
+<li>bijv. ook: Turing test</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2018, Eelco Dijkstra.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/talen/inhoud.ipynb.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

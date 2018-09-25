@@ -1,0 +1,430 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Talen en grammatica's\n",
+    "\n",
+    "Een taal bestaat een verzameling *zinnen*.\n",
+    "Dit geldt zowel voor een natuurlijke taal zoals het Nederlands, als voor een programmeertaal.\n",
+    "Het aantal zinnen in een taal is erg groot; dit kan zelfs oneindig zijn.\n",
+    "Het is handig als je een *beknopte beschrijving* van een taal hebt die aangeeft wat de geldige zinnen in de taal zijn, \n",
+    "en wat is de betekenis daarvan is. \n",
+    "In het geval van programmeertalen is zo'n beschijving zelfs essentieel: \n",
+    "het moet zowel voor de menselijke gebruikers van de taal als voor de computer volstrekt duidelijk zijn wat een geldig programma is,\n",
+    "en wat een geldig programma betekent.\n",
+    "\n",
+    "Een beschrijving van een natuurlijke taal als het Nederlands is lastig:\n",
+    "je hebt hiervoor tenminste een woordenboek nodig met alle woorden en een grammatica (syntax).\n",
+    "En daarnaast nog een grote verzameling van vaste uitdrukkingen, spreekwoorden en gezegdes,\n",
+    "en lijsten met uitzonderingen.\n",
+    "\n",
+    "Een beschrijving van een programmeertaal kan veel beknopter:\n",
+    "het aantal woorden is erg beperkt, de regels zijn (naar verhouding) eenvoudig, en er zijn\n",
+    "(als de taal goed ontworpen is) weinig speciale gevallen en uitzonderingen.\n",
+    "Maar omdat een programmeertaal vaak een historie heeft, waarin soms onhandige keuzes gemaakt zijn,\n",
+    "heb je ook in programmeertalen te maken met uitzonderingen en speciale gevallen.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Geldig versus correct\n",
+    "\n",
+    "Een zin is een reeks woorden en andere symbolen zoals leestekens.\n",
+    "Maar niet elke reeks woorden en leestekens is een geldige Nederlandse zin.\n",
+    "Een geldige zin in het Nederlands is een zin die grammaticaal klopt.\n",
+    "Je begrijpt dan wat de betekenis van die zin is.\n",
+    "\n",
+    "De zin \"*maan kaas*\" is geen geldige Nederlandse zin.\n",
+    "Het is een on-zin: je kunt hier geen betekenis aan toekennen.\n",
+    "\n",
+    "Aan een geldige zin kun je een betekenis toekennen.\n",
+    "Maar die betekenis kan best onzin zijn, zoals in \"*De maan is van kaas.*\"\n",
+    "In een fantasieverhaal zou zo'n zin nog kunnen,\n",
+    "maar in een \"serieuze\" tekst probeer je zinnen te gebruiken waarvan de betekenis geen onzin is.\n",
+    "\n",
+    "Op eenzelfde manier is een *geldig programma* een programma waarvan de computer weet hoe dit uitgevoerd moet worden.\n",
+    "Maar daarmee hoeft het geen *correct programma* te zijn: het kan een foutief antwoord geven.\n",
+    "Als je een sorteerprogramma maakt, dan moet je er niet alleen voor zorgen dat dit door de computer uitgevoerd kan worden.\n",
+    "Je moet er ook voor zorgen dat deze uitvoering altijd het bedoelde resultaat geeft: een gesorteerde versie van de input.\n",
+    "\n",
+    "#### Opdracht\n",
+    "\n",
+    "* geef een voorbeeld van een Nederlandse on-zin: een opeenvolging van woorden die geen goede Nederlandse zin vormt.\n",
+    "* geef een voorbeeld van een geldige Nederlandse zin waarvan de betekenis onzin is."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Structuur\n",
+    "\n",
+    "Zoals eerder gezegd: een zin is een reeks woorden en leestekens - maar niet elke reeks is een geldige zin in een bepaalde taal.\n",
+    "Door middel van een grammatica (syntax) van een taal beschrijven we welke reeksen geldige zinnen in die taal zijn.\n",
+    "Een grammatica bevat *regels* om de structuur van geldige zinnen te beschrijven.\n",
+    "\n",
+    "Dit geldt zowel voor natuurlijke talen als voor programmeertalen.\n",
+    "\n",
+    "Een grammatica beschrijft bovendien de *structuur* van een zin:\n",
+    "uit welke onderdelen bestaat deze zin, en wat is de relatie tussen deze onderdelen?\n",
+    "\n",
+    "De structuur van een zin hangt nauw samen met de betekenis van deze zin.\n",
+    "Dezelfde woorden in een andere structuur geeft een andere betekenis.\n",
+    "\n",
+    "> Dit is ook de reden waarom je op school leert de structuur van Nederlandse zinnen te *ontleden*: je kunt dan de verschillende onderdelen van een zin benoemen, en daarmee de rol van die onderdelen in de betekenis begrijpen.\n",
+    "\n",
+    "> Bij het vak Nederlands gebruik je vaak twee soorten ontleden: *taalkundig* en *redekundig* ontleden. Bij taalkundig ontleden beschrijf je de *woordsoort* van de woorden, bijvoorbeeld: `de` - lidwoord, `grote` - bijvoeglijk naamwoord, `hond`  - zelfstandig naamwoord. Bij *redekundig ontleden* gaat het om de *rol* van de verschillende onderdelen in een zin: bijvoorbeeld in `de grote hond bijt de kat` is `de grote hond` het onderwerp, `bijt` het gezegde, en `de kat` het lijdend voorwerp.\n",
+    "\n",
+    "* http://wp.digischool.nl/nederlands/home/taalkundig-ontleden-woordsoorten/\n",
+    "* http://wp.digischool.nl/nederlands/home/ontleden-redekundig-taalkundig/"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Samengestelde vormen\n",
+    "\n",
+    "Een woord of een leesteken kun je zien als een enkelvoudige vorm.\n",
+    "Er zijn verschillende soorten enkelvoudige vormen.\n",
+    "In een natuurlijke taal heb je bijvoorbeeld zelfstandige naamwoorden, lidwoorden, werkwoorden, voorzetsels, voegwoorden, punten, komma's, enz.\n",
+    "In een programmeertaal heb je getallen, namen voor variabelen en functies, symbolen als `;` en `,` enz.\n",
+    "\n",
+    "Daarnaast heb je manieren nodig om samengestelde vormen te maken.\n",
+    "In een natuurlijke taal heb je daarvoor de opeenvolging (volgorde) van de woorden, en bijvoorbeeld voegwoorden en leestekens.\n",
+    "In een programmeertaal heb je daarvoor bijvoorbeeld opeenvolging (`;`), keuze (`if`), herhaling (`for`, `while`), en functies.\n",
+    "De regels in de grammatica beschrijven hoe je deze samengestelde vormen maakt uit de enkelvoudige vormen."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Syntaxdiagrammen\n",
+    "\n",
+    "De symbolen die in de zinnen van een taal kunnen voorkomen noemen we de *eindsymbolen* van die taal.\n",
+    "Een verzameling symbolen noemen we ook wel een *alfabet*.\n",
+    "\n",
+    "De syntaxregels van die taal beschrijven hoe we deze eindsymbolen kunnen combineren tot geldige zinnen.\n",
+    "regels van de \n",
+    "\n",
+    "De regels van een grammatica, waarmee we beschrijven wat geldige zinnen zijn, kunnen we op verschillende manieren beschrijven.\n",
+    "Een *syntaxdiagram* is een grafische notatie voor syntaxregels.\n",
+    "\n",
+    "* een syntaxdiagram beschrijft een taal - alle zinnen in die taal, en de structuur van deze zinnen;\n",
+    "* vb: eenvoudige \"natuurlijke\" taal, subset van Nederlands\n",
+    "* vb: eenvoudige programmeertaal\n",
+    "\n",
+    ".. todo:: \n",
+    "\n",
+    "  * Overeenkomst/verschil tussen eindige automaat en syntaxdiagram?\n",
+    "\n",
+    "Een syntaxdiagram bestaat uit een aantal *regels*.\n",
+    "Elke regel bestaat uit een diagram dat gelabeld is met een hulpsymbool.\n",
+    "Je kunt dit hulpsymbool beschouwen als de naam van die regel.\n",
+    "Dit hulpsymbool staat ook voor alle *zinsvormen* die met die regel gemaakt kunnen worden.\n",
+    "Een *zinsvorm* is een reeks die bestaat uit eindsymbolen en hulpmsymbolen.\n",
+    "\n",
+    "Aan de ene kant is het lastig om zonder namen (hulpsymbolen) de structuur te beschrijven.\n",
+    "Aan de andere kant geven deze namen vaak een hint voor de betekenis."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Mogelijke opdrachten\n",
+    "\n",
+    ".. todo::\n",
+    "\n",
+    "  Opdrachten uitwerken. De opdrachten kunnen van de vorm zijn:\n",
+    "\n",
+    "    * gegeven een syntaxdiagram, genereer 3 verschillende zinnen\n",
+    "    * gegeven een syntaxdiagram en een zin, ga na of deze zin element van de taal is\n",
+    "    * gegeven een syntaxdiagram en een zin, maak een ontleedboom "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Opmerkingen\n",
+    "\n",
+    ".. todo::\n",
+    "\n",
+    "  Uitwerken van deze opmerkingen.\n",
+    "  \n",
+    "    * we hebben hier ook weer te maken met *vorm* en *betekenis*\n",
+    "    * niet alle vormen zijn \"geldige vormen\"\n",
+    "    * alleen van geldige vormen kunnen we de betekenis bepalen\n",
+    "    * deze betekenis hangt samen met de structuur van de vorm: de manier waarop de delen samengevoegd zijn.\n",
+    "    * een zin is een opeenvolging van woorden; niet alleen de woorden zelf maar ook de volgorde van de woorden bepaalt de betekenis.\n",
+    "    * onder deze volgorde ligt een structuur. Een zin bestaat uit onderdelen die een bepaalde verhouding tot elkaar hebben, en die in de zin een bepaalde rol spelen.\n",
+    "    * een ander voorbeeld van een soort grammatica is wat we zien bij \"blokjestalen\" - zoals Scratch.\n",
+    "    Ook daar komen we recursieve structuren tegen, bijvoorbeeld voor expressies.\n",
+    "    * gebruik van boekje van Jan Lepeltak (De Taalkist)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Voorbeeld: Expr\n",
+    "\n",
+    "We geven hier een voorbeeld van een eenvoudige expressietaal.\n",
+    "\n",
+    "Een expressie (`Expr`) is een reeks termen verbonden door `+` of `-` operatoren.\n",
+    "Voorbeelden van Expr zijn dan: `Term`, `Term - Term`, `Term + Term + Term`, enz."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"expr.png\" alt=\"expr-diagram\" width=\"200\"/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Een term (`Term`) is een reeks factoren verbonden door `*` of `/` operatoren.\n",
+    "Voorbeelden van Term zijn dan: `Factor`, `Factor * Factor`, `Factor * Factor / Factor`, enz."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"term.png\" alt=\"factor-diagram\" width=\"200\"/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Een factor (`Factor`) is een getal (`Number`), een variabele (`Variable`), of een `Expr` tussen haakjes.\n",
+    "Voorbeelden van `Factor` zijn dan `Number`, `(Expr)`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"factor.png\" alt=\"factor-diagram\" width=\"300\"/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Je kunt uit een zinsvorm (met hulpsymbolen) een *zin* (met alleen eindsymbolen) door alle hulpsymbolen hierin te vervangen door hun \"expansie\" volgens de regel van dat hulpsymbool. Als je dat dat voor stap doet, zoals hieronder, spreken we ook wel van een *afleiding*.\n",
+    "\n",
+    "**Voorbeeld**:\n",
+    "\n",
+    "```\n",
+    "Expr ->\n",
+    "Term + Term -> \n",
+    "Factor + Term ->\n",
+    "Factor + Factor * Factor ->\n",
+    "Number + Factor * Factor ->\n",
+    "Number + Number * Factor ->\n",
+    "Number + Number * Variable\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Voorbeeld: HTML-lijsten\n",
+    "\n",
+    "In HTML heb je twee mogelijke vormen van opsomming: een ongeordende lijst (`ul`) en de geordende lijst (`ol`).\n",
+    "De eerste resulteert meestal in een lijst met \"bullets\", de tweede in een genummerde lijst.\n",
+    "\n",
+    "We geven hieronder de syntaxdiagrammen voor deze opsommingen."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Een geordende lijst (OrderedList) bestaat uit het haakjespaar `<ol> ... </ol>`, met daartussen 0 of meer ListItems.\n",
+    "Een lijst met ListItems kan leeg zijn: in dat geval heb je alleen de haakjes `<ol> </ol>`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"orderedlist.png\" alt=\"orderedlist-diagram\" width=\"400\"/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Een ongeordende lijst (UnorderedList)  bestaat uit het haakjespaar `<ul> ... </ul>` met daartussen 0 of meer ListItems."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"unorderedlist.png\" alt=\"unorderedlist-diagram\" width=\"400\"/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Een ListItem bestaat uit het haakjespaar `<li> ... </li>` met daartussen een Item."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"listitem.png\" alt=\"listitem-diagram\" width=\"300\"/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Een Item is een OrderedList, of een UnorderedList, of een OtherItem.\n",
+    "Een voorbeeld van een OtherItem is een \"normale\" tekst.\n",
+    "\n",
+    "Merk op dat een Item ook weer een OrderedList of UnorderedList kan zijn: dit betekent dat we deze deelstructuren kunnen *nesten*, bijvoorbeeld een geordende lijst als element in een geordende lijst."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"item.png\" alt=\"item-diagram\" width=\"250\"/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Een voorbeeld van een ongeordende lijst:\n",
+    "\n",
+    "```\n",
+    "<ul>\n",
+    "  <li> huisje </li>\n",
+    "  <li> boompje </li>\n",
+    "  <li> beestje </li>\n",
+    "</ul>\n",
+    "\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<ul>\n",
+    "  <li> huisje </li>\n",
+    "  <li> boompje </li>\n",
+    "  <li> beestje </li>\n",
+    "</ul>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Opdracht**: geef een aantal voorbeelden van een UnorderedList. \n",
+    "Geef tenminste één voorbeeld van *nesting*, waarbij je een lijst binnen een lijst gebruikt.\n",
+    "\n",
+    "Laat van één voorbeeld zien hoe je dit kunt afleiden via de syntaxdiagrammen.\n",
+    "\n",
+    "**Opdracht**: demonstreer deze voorbeelden in een HTML-pagina."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Voorbeeld: Nederlands\n",
+    "\n",
+    ".. todo::\n",
+    "\n",
+    "  Voorbeeld van syntaxdiagrammen voor eenvoudige Nederlandse zinnen.\n",
+    "  \n",
+    "  (En mogelijk: voorbeeld van een Haiku-generator?)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Ontleedbomen\n",
+    "\n",
+    "We kunnen de afleiding van een zin met behulp van de syntaxregels ook op een grafische manier weergeven, \n",
+    "in de vorm van een boom.\n",
+    "We spreken dan van een *ontleedboom*.\n",
+    "Zo'n ontleedboom laat de structuur van een zin zien.\n",
+    "Bovendien kun je deze gebruiken om de betekenis van de zin duidelijk te maken.\n",
+    "\n",
+    "Programma voor het tekenen van ontleedbomen: http://mshang.ca/syntree/\n",
+    "\n",
+    "In het voorbeeld hieronder zie je de ontleedboom van de eerder gegeven afleiding.\n",
+    "Aan de hand van deze ontleedboom kunnen we de betekenis van de expressie - dat wil zeggen, de expressie uitrekenen.\n",
+    "Je ziet hier aan de boom dat \"vermenigvuldigen voor optellen gaat\": dit is in de syntaxdiagrammen vastgelegd."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"exprtree.png\" alt=\"expr tree\" width=\"350\"/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Voorbeeld: ontleedboom\n",
+    "\n",
+    ".. todo::\n",
+    "  \n",
+    "  voorbeeld van een ontleedboom van een Nederlandse zin.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
