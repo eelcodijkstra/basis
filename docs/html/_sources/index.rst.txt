@@ -10,8 +10,11 @@ Welkom bij Grondslagen
    :maxdepth: 4
 
    inleiding.rst
+   informatie.rst
+   data.rst
    eindige-automaten.rst
-   bomen.ipynb
+   programmeren.rst
+   bomen.rst
    talen.rst
    todo.rst
 

@@ -1,0 +1,288 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Over programmeren &#8212; Grondslagen  documentatie</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Zoeken" href="search.html" />
+    <link rel="next" title="Bomen" href="bomen.html" />
+    <link rel="prev" title="Eindige automaten" href="eindige-automaten.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Grondslagen</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigatie</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="informatie.html">Informatie en data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eindige-automaten.html">Eindige automaten</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Over programmeren</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#programma-s-zonder-invoer">Programma’s zonder invoer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#andere-informatieprocessen-met-een-vast-verloop">Andere informatieprocessen met een vast verloop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#structuur-en-herhaling">Structuur en herhaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#programma-s-met-invoer">Programma’s met invoer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#over-processen">Over processen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#opmerkingen">Opmerkingen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bomen.html">Bomen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="talen.html">Talen en grammatica’s</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">ToDo</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="eindige-automaten.html" title="vorig hoofdstuk">Eindige automaten</a></li>
+      <li>Next: <a href="bomen.html" title="volgend hoofdstuk">Bomen</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Snel zoeken</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Zoek" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="over-programmeren">
+<h1>Over programmeren<a class="headerlink" href="#over-programmeren" title="Permalink naar deze titel">¶</a></h1>
+<p>Enkele begrippen rond programmeren komen we ook in het dagelijks leven tegen.
+Deze voorbeelden kunnen helpen om programmeren beter te begrijpen.</p>
+<p>Als je een taart wilt bakken, heb je een <em>recept</em> nodig.
+In het recept staat wat je nodig hebt: de ingrediënten (bijvoorbeeld bloem en boter),
+en de hulpmiddelen (zoals een kom, een mixer, en een oven).
+Het recept geeft stap voor stap aan hoe je van de ingrediënten, met deze hulpmiddelen, een taart bakt.</p>
+<p>Met een recept alleen gebeurt er nog niets: je hebt een <em>kok</em> nodig - iemand nodig die het recept kan uitvoeren.
+Deze heeft <em>hulpmiddelen</em> nodig, en <em>ingrediënten</em>.
+Daarna kan hij aan de slag gaan met het bakken van de taart.
+Het uitvoeren van de verschillende stappen van het bakken kost <em>tijd</em>.
+We noemen iets dat in de tijd verloopt een <em>proces</em>.</p>
+<p>Als alles goed gaat, heb je als <em>resultaat</em> van het bakken een taart.
+Aan de taart kun je niet meer zien hoe deze gemaakt is - welke stappen er gebruikt zijn.
+Maar als je de taart wilt gebruiken (opeten) is dat ook niet je eerste vraag.</p>
+<p>We hebben in dit voorbeeld te maken met de volgende begrippen:</p>
+<ul class="simple">
+<li><em>script</em> (algoritme, programma) - stappenplan dat precies vastlegt welke stappen uitgevoerd moeten worden;</li>
+<li><em>actor</em> (processor) - kan een script uitvoeren; dit kan een mens zijn, maar ook een machine (automaat);</li>
+<li><em>proces</em> - het uitvoeren van een script door een actor; bij een proces is er meestal sprake van:</li>
+<li><em>invoer</em> (input)</li>
+<li><em>uitvoer</em> (output, resultaat)</li>
+<li><em>hulpmiddelen</em> (resources)</li>
+</ul>
+<p>In het dagelijks leven vinden we meer voorbeelden van scripts, actoren en processen:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="15%" />
+<col width="25%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Script/Programma</th>
+<th class="head">Proces</th>
+<th class="head">Actor/Processor</th>
+<th class="head">Resultaat</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Recept</td>
+<td>Bakken</td>
+<td>Kok</td>
+<td>Taart</td>
+</tr>
+<tr class="row-odd"><td>Breipatroon</td>
+<td>Breien</td>
+<td>Herder</td>
+<td>Trui</td>
+</tr>
+<tr class="row-even"><td>Routebeschrijving</td>
+<td>Reis</td>
+<td>Automobilist</td>
+<td>Bestemming bereikt</td>
+</tr>
+<tr class="row-odd"><td>Orgelboek</td>
+<td>Afspelen</td>
+<td>Draaiorgel</td>
+<td>Muziek</td>
+</tr>
+<tr class="row-even"><td>Optellen</td>
+<td>Rekenen</td>
+<td>Boekhouder</td>
+<td>Som</td>
+</tr>
+</tbody>
+</table>
+<p>De verschillende <em>scripts</em> zijn geschreven voor een bepaald soort <em>actor</em>.
+Een recept is geschreven in een taal die door een kok begrepen wordt.
+Als je wilt leren koken, dan moet je de recepten-taal (of koks-taal) leren begrijpen.</p>
+<p>Een script of programma voor een computer schrijven we in een <em>programmeertaal</em>.
+Dit script legt precies en volledig vast welke stappen de computer moet nemen bij het uitvoeren van het proces.</p>
+<p>Een computer voert de opdrachten in het programma uit precies en letterlijk uit.
+Een computer doet wat je zegt - en dat is misschien niet altijd wat je bedoelt.
+En omdat computers zo snel zijn, loopt het soms erg snel uit de hand.</p>
+<p>&gt; Vb: (i) peanut butter jelly sandwich; (ii) tovenaarsleerling.</p>
+<div class="section" id="programma-s-zonder-invoer">
+<h2>Programma’s zonder invoer<a class="headerlink" href="#programma-s-zonder-invoer" title="Permalink naar deze titel">¶</a></h2>
+<p>Als een draaiorgel een orgelboek afspeelt, komt daar verder geen invoer aan te pas.
+Dit betekent ook dat het resultaat (met hetzelfde orgel) ook altijd precies gelijk is.
+Het systeem is programmeerbaar - met een ander programma krijg je een ander resultaat.</p>
+<p>Andere voorbeelden van programma’s zonder invoer die gebruikt worden om een apparaat te besturen:</p>
+<ul class="simple">
+<li>het [Jaquard weefgetouw](<a class="reference external" href="http://nl.wikipedia.org/wiki/Jacquardgetouw">http://nl.wikipedia.org/wiki/Jacquardgetouw</a>): het programma, op ponsbanden, beschrijft het patroon dat geweven moet worden. Dit is een ingenieus systeem - één van de voorlopers van de huidige computers.</li>
+<li>dansende robot: je kunt een robot een dans laten uitvoeren, je beschrijft dan precies welke danspassen de robot uit moet voeren; de robot reageert niet op de muziek, of op andere invoer, maar voert precies het dansprogramma uit;</li>
+<li>verfrobot: sommige robots kunnen hun acties uitvoeren zonder invoer: als ze geprogrammeerd zijn, maken ze altijd precies dezelfde bewegingen, hoe de omgeving er ook uitziet.</li>
+</ul>
+</div>
+<div class="section" id="andere-informatieprocessen-met-een-vast-verloop">
+<h2>Andere informatieprocessen met een vast verloop<a class="headerlink" href="#andere-informatieprocessen-met-een-vast-verloop" title="Permalink naar deze titel">¶</a></h2>
+<p>In het dagelijks leven hebben we ook te maken met informatieprocessen die op een vaste manier verlopen,
+met alleen een programma, en zonder invoer (interactie):</p>
+<ul class="simple">
+<li>video, film</li>
+<li>boek</li>
+</ul>
+<p>Dit model leent zich voor “broadcast”: distributie op grote schaal, in eenzelfde vorm.</p>
+<blockquote>
+<div>Het verschil tussen een video en een computergame is dat de video een vast verloop heeft - en het computergame elke keer anders verloopt, afhankelijk van de interactie met de speler(s).</div></blockquote>
+</div>
+<div class="section" id="structuur-en-herhaling">
+<h2>Structuur en herhaling<a class="headerlink" href="#structuur-en-herhaling" title="Permalink naar deze titel">¶</a></h2>
+<p>In een muziekboek voor een draaiorgel zijn alle noten in de tijd uitgeschreven.
+Hoe langer een stuk duurt, des te dikker is het boek.
+Ook voor een film of voor een leesboek is dit het geval.</p>
+<p>In een muziekstuk komt vaak herhaling voor.
+Een muziekstuk heeft ook vaak een speciale structuur, met vaste onderdelen.
+In de muzieknotatie kun je dat weergeven.
+Maar een orgelboek voor een draaiorgel kent geen structuur: de muziek is volledig uitgeschreven tot een lineair proces.</p>
+</div>
+<div class="section" id="programma-s-met-invoer">
+<h2>Programma’s met invoer<a class="headerlink" href="#programma-s-met-invoer" title="Permalink naar deze titel">¶</a></h2>
+<p>De voorbeelden die we hiervoor gezien hebben geven bij hetzelfde programma altijd hetzelfde resultaat.
+Als het ook mogelijk is om invoer te verwerken neemt het aantal praktische mogelijkheden enorm toe.
+Eenzelfde programma kan dan resulteren in totaal verschillende processen en resultaten.</p>
+<p>Een zakrekenmachine is een voorbeeld van een processor met een vast programma dat reageert op invoer:
+de getallen en opdrachten die je via het toetsenbord invoert.</p>
+<p>Bij de meeste computerprogramma’s is er sprake van invoer.
+Het verloop van het programma (het proces) wordt dan bepaald door het programma en door de waarden in de invoer (data).
+Deze data kan uit verschillende bronnen afkomstig zijn: bijvoorbeeld van de gebruiker,
+maar ook uit een bestand of uit een database.</p>
+<blockquote>
+<div><p>Neem als voorbeeld een tekstverwerkingsprogramma: in dit geval heb je te maken met het tekstbestand dan bewerkt wordt,
+en met de interactieve invoer van de gebruiker.
+Mogelijk kun je ook nog allerlei voorkeursinstellingen aangeven die in een apart bestand bewaard worden.
+Dit zijn allemaal voorbeelden van data die gebruikt worden bij de uitvoering van het programma.</p>
+<p>Als een programma anders reageert dan je gewend bent, hoeft dat niet aan het programma te liggen:
+het programma kan andere invoer gebruiken, bijvoorbeeld een bestand met voorkeursinstellingen,
+waardoor het gedrag verandert.</p>
+</div></blockquote>
+</div>
+<div class="section" id="over-processen">
+<h2>Over processen<a class="headerlink" href="#over-processen" title="Permalink naar deze titel">¶</a></h2>
+<p>We gebruiken het begrip “proces” voor alles dat zich in de tijd afspeelt, waarbij er sprake is van <em>verandering</em>. “Tijd”, “volgorde”, “toestand” zijn begrippen die daar direct mee te maken hebben.</p>
+</div>
+<div class="section" id="opmerkingen">
+<h2>Opmerkingen<a class="headerlink" href="#opmerkingen" title="Permalink naar deze titel">¶</a></h2>
+<p class="rubric">Wanneer begint de uitvoering van een programma?</p>
+<p>Eigenlijk moeten we naast programma, proces en resultaat nog een begrip invoeren:
+de <em>opdracht</em> om het programma uit te voeren.
+In de context van programmeren komt dat bijvoorbeeld overeen met een functie-aanroep.</p>
+<p>Hoe ziet dit eruit in de voorbeelden uit het dagelijks leven?</p>
+<p>In de browser is een knop (button) vaak gekoppeld aan een stukje programma (functie).
+Het indrukken van de knop, bijvoorbeeld door een muis-click, is dan de opdracht om dat stukje programma uit te voeren.</p>
+<p>In het kook-voorbeeld kan de chef-kok zijn assistent de opdracht geven voor het bereiden van een gerecht aan de hand van een bepaald recept.
+Dan kan bijvoorbeeld zijn: “maak een kwart liter sauce bearnaise”.
+In dit geval is het belangrijk dat het recept een naam heeft.
+De assistent weet dan wat er bedoeld wordt, en kan eventueel in het kookboek het recept opzoeken.</p>
+<p class="rubric">Programma en data</p>
+<p>Het onderscheid tussen invoer en programma is niet fundamenteel - maar wel praktisch.
+In een universele Turingmachine - een wiskundig model van een universele computer - staat zowel de invoer als het programma op de band (tape);
+ook de tussenresultaten van de berekeningen komen daarop terecht.
+In een computer volgens de Von Neuman architectuur staan zowel de data (invoer en tussenresultaten) als het programma in hetzelfde geheugen.</p>
+<p>Het is om meerdere redenen praktisch om programma en data (invoer en tussenresultaten) te scheiden:</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>het programma staat van te voren vast, de invoer is soms pas tijdens de uitvoering van het programma beschikbaar. Dit is bijvoorbeeld het geval bij een interactief programma, zoals de genoemde tekstverwerker, of een computergame.</dt>
+<dd><ul class="first last">
+<li>we zeggen dan ook wel dat het programma een ander “moment of binding” heeft dan de invoer;</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>de invoer beschrijft het actuele <em>probleem</em> dat we willen oplossen; het programma beschrijft  de manier waarop we de oplossing willen berekenen.</dt>
+<dd><ul class="first last">
+<li>we kunnen over een programma redeneren voor alle mogelijke invoer, en dus voor alle mogelijke voorbeelden van het probleem dat het programma moet oplossen.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>we kunnen een computersysteem beveiligen door te bewaken welke programma’s in uitvoering genomen worden. We hoeven dan geen beveiliging op de data te hebben.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2018, Eelco Dijkstra.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/programmeren.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

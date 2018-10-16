@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Bomen en boomstructuren &#8212; Grondslagen  documentatie</title>
+    <title>Bomen &#8212; Grondslagen  documentatie</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -18,7 +18,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
     <link rel="next" title="Talen en grammatica’s" href="talen.html" />
-    <link rel="prev" title="Eindige automaten" href="eindige-automaten.html" />
+    <link rel="prev" title="Over programmeren" href="programmeren.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -42,12 +42,16 @@
 <h3>Navigatie</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="informatie.html">Informatie en data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="eindige-automaten.html">Eindige automaten</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Bomen en boomstructuren</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Zoekbomen">Zoekbomen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Hiërarchische-structuren">Hiërarchische structuren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Ontleedbomen">Ontleedbomen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Lindenmayer-figuren">Lindenmayer figuren</a></li>
+<li class="toctree-l1"><a class="reference internal" href="programmeren.html">Over programmeren</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Bomen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#voorbeeld-filesysteem">Voorbeeld: filesysteem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#terminologie">Terminologie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#voorbeeld-html-document">Voorbeeld: HTML document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#binaire-zoekbomen">Binaire zoekbomen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ontleedbomen">Ontleedbomen</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="talen.html">Talen en grammatica’s</a></li>
@@ -58,7 +62,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="eindige-automaten.html" title="vorig hoofdstuk">Eindige automaten</a></li>
+      <li>Previous: <a href="programmeren.html" title="vorig hoofdstuk">Over programmeren</a></li>
       <li>Next: <a href="talen.html" title="volgend hoofdstuk">Talen en grammatica’s</a></li>
   </ul></li>
 </ul>
@@ -81,32 +85,148 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="Bomen-en-boomstructuren">
-<h1>Bomen en boomstructuren<a class="headerlink" href="#Bomen-en-boomstructuren" title="Permalink naar deze titel">¶</a></h1>
-<div class="section" id="Zoekbomen">
-<h2>Zoekbomen<a class="headerlink" href="#Zoekbomen" title="Permalink naar deze titel">¶</a></h2>
-<ul class="simple">
-<li>belanceerde bomen; binaire zoekbomen</li>
-<li>binair zoeken</li>
+  <div class="section" id="bomen">
+<h1>Bomen<a class="headerlink" href="#bomen" title="Permalink naar deze titel">¶</a></h1>
+<p>Een belangrijke structuur die je overal in de informatica tegenkomt is de <em>boom</em>.
+Dit is een <em>hiërarchische structuur</em> waarin de structuur van de delen gelijk is aan de structuur van het geheel,
+zoals bij een boom in de natuur: een tak heeft dezelfde structuur als de boom.</p>
+<p>Met behulp van een boom kun je een <em>hiërarchische structuur</em> weergeven.
+Enkele voorbeelden hiervan: een hiërarchisch filesysteem, een tekst (bijvoorbeeld een verslag), een HTML-document.</p>
+<p>Met behulp van een boom kun je ook efficiënt zoeken.
+Een voorbeeld daarvan is een <em>binaire zoekboom</em>.</p>
+<p>Met een <em>ontleedboom</em> maak je de syntactische structuur van een (lineaire) zin duidelijk.
+Aan de hand van deze structuur bepaal je de betekenis van deze zin.
+Voorbeelden hiervan komen we tegen bij natuurlijke talen, en bij <em>formele talen</em> zoals programmeertalen.</p>
+<div class="section" id="voorbeeld-filesysteem">
+<h2>Voorbeeld: filesysteem<a class="headerlink" href="#voorbeeld-filesysteem" title="Permalink naar deze titel">¶</a></h2>
+<p>Een voorbeeld van een boomstructuur is een hiërarchisch filesysteem,
+zoals je dat bijvoorbeeld tegenkomt bij operating systems als Windows, OS X, en Linux.
+In zo’n filesysteem is een bestand òf een “normaal” bestand, òf een map met bestanden.
+Een bestand in een map kan dan ook zelf weer een map met bestanden zijn.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/filesysteem-boom.png"><img alt="figuur: filesysteem-boom" src="_images/filesysteem-boom.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Een hiërarchisch filesysteem</span></p>
+</div>
+<p>Met behulp van zo’n filesysteem kun je je bestanden op een logische manier organiseren,
+bijvoorbeeld in een map per project.
+De bestanden van een project kun je dan bijvooreeld weer onderverdelen in documentatie, broncode, projectadministratie, e.d.</p>
+<blockquote>
+<div>Vaak is het verdelen van bestanden in mappen niet voldoende om aan alle wensen voor het organiseren van gegevens te voldoen.
+Moderne filesystemen hebben daarvoor extra mogelijkheden, bijvoorbeeld in de vorm van labels.</div></blockquote>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Te doen</p>
+<ul class="last simple">
+<li>(wortel)pad; padnaam (ook in URL)</li>
 </ul>
 </div>
-<div class="section" id="Hiërarchische-structuren">
-<h2>Hiërarchische structuren<a class="headerlink" href="#Hiërarchische-structuren" title="Permalink naar deze titel">¶</a></h2>
+</div>
+<div class="section" id="terminologie">
+<h2>Terminologie<a class="headerlink" href="#terminologie" title="Permalink naar deze titel">¶</a></h2>
+<p>Het beginpunt van de boom, bijvoorbeeld de map op het hoogste niveau, noemen we de wortel of <em>root</em>.
+(In Linux spreek je over de <em>root directory</em>, aangegeven als <code class="docutils literal notranslate"><span class="pre">/</span></code>.)</p>
+<p>De bovenliggende map noem je de <em>ouder</em>-knoop: de <em>parent directory</em>.
+Deze geef je aan als <code class="docutils literal notranslate"><span class="pre">..</span></code>.</p>
+<p>Omgekeerd noem je de onderliggende mappen (knopen) de kinderen: de <em>child directories</em>.</p>
+<p>Een knoop(?) die geen kinderen heeft, zoals in dit voorbeeld een “normaal” bestand, noemen we een <em>blad</em>.</p>
+<p>Een dergelijke boomstructuur wordt vaak getekend met de wortel van de boom bovenaan,
+dus eigenlijk “op z’n kop”.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/filesysteem-horizontale-boom.png"><img alt="figuur: filesysteem-horizontale-boom" src="_images/filesysteem-horizontale-boom.png" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">Een filesysteem als horizontale boom</span></p>
+</div>
+<p>Een andere manier om zo’n structuur weer te geven is <em>horizontaal</em>:
+de wortel staat dan links boven, en de kinderen <em>ingesprongen</em> daaronder.
+Soms is het mogelijk om een subboom in- en uit te klappen.</p>
+<p>Merk op dat een map <em>leeg</em> kan zijn: deze bevat dan geen mappen of gewone bestanden.</p>
+</div>
+<div class="section" id="voorbeeld-html-document">
+<h2>Voorbeeld: HTML document<a class="headerlink" href="#voorbeeld-html-document" title="Permalink naar deze titel">¶</a></h2>
+<p>De structuur van een HTML-document geef je weer met behulp van speciale symbolen: <em>tags</em>.</p>
+<p>Deze tags komen meestal in (haakjes)paren: de inhoud van het element staat tussen deze haken.
+Een tag heeft de vorm <code class="docutils literal notranslate"><span class="pre">&lt;tagname&gt;</span></code> (voor een openingshaak) of <code class="docutils literal notranslate"><span class="pre">&lt;/tagname&gt;</span></code> (voor de bijbehorende sluithaak).</p>
+<p>Voorbeeld van een een eenvoudig HTML-document:</p>
+<div class="highlight-HTML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!doctype html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Welcome<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Welkom op mijn website<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Dit is mijn eerste website<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Hier moet nog meer tekst komen<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Door middel van inspringen geven we de structuur van het document weer.
+We kunnen dit ook tekenen als een boom:</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/html-boom.png"><img alt="figuur: html-boom" src="_images/html-boom.png" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">HTML-boom</span></p>
+</div>
+<p><strong>Opdracht</strong></p>
+<p>Zoek voorbeelden van een horizontale weergave van een boom.
+Let bijvoorbeeld op het gebruik van inspringen en in- en uitklappen.</p>
+<p><strong>Opdracht</strong></p>
+<p>Zoek uit wat een <em>outline editor</em> is (voor tekstdocumenten).
+Welke mogelijkheden biedt de tekstverwerkingsprogramma’s die je gebruikt om met de outline te werken?
+(Bijvoorbeeld: navigeren; in- en uitklappen van tekst; reorganiseren: veranderen van de hiërarchie, verplaatsen van delen.)</p>
+<p>De structuur van een HTML-document is bijvoorbeeld van belang bij het vormgeven hiervan in de browser.
+Als je de opmaak van een knoop verandert, bijvoorbeeld de kleur of het lettertype,
+verandert de opmaak van de hele bijbehorende subboom.
+Anders gezegd: de kindknopen in de boom erven de vormgevingseigenschappen van de ouderknoop.
+Dit is het “cascading” aspect van “cascading style sheets” (<a class="reference external" href="https://nl.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>).</p>
+</div>
+<div class="section" id="binaire-zoekbomen">
+<h2>Binaire zoekbomen<a class="headerlink" href="#binaire-zoekbomen" title="Permalink naar deze titel">¶</a></h2>
+<p>Als we de elementen in een boom op een handige manier organiseren,
+dan kunnen we hierin efficiënt zoeken.
+(Vergelijk dit met het sorteren van de elementen van een rij (array).)</p>
+<p>Elk element (knoop) in een binaire zoekboom heeft een waarde en een linker en een rechter subbomen;
+een subboom kan leeg zijn (vgl. een lege map in een filesysteem).
+Het <em>maximum</em> van de waarden in de linker subboom is kleiner dan de waarde in de knoop zelf;
+het <em>minnimum</em> van de waarden in de rechter subboom is ten minste (<code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>) de waarde in de knoop zelf.</p>
+<p>Voorbeeld van een binaire zoekboom:</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/binaire-zoekboom.png"><img alt="figuur: binaire-zoekboom" src="_images/binaire-zoekboom.png" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">Binaire zoekboom</span></p>
+</div>
+<p>In een dergelijke boom kunnen we efficiënt zoeken, als bij binair zoeken in een rij (array):
+als de waarde die je zoekt gelijk is aan de waarde in de wortel, dan ben je klaar;
+als de waarde die je zoekt kleiner is dan de waarde in de wortel,
+dan zoek je op dezelfde manier met de linker subboom als wortel;
+als de waarde die je zoekt groter is dan de waarde in de wortel,
+dan zoek je op dezelfde manier met de rechter subboom als wortel.</p>
+<blockquote>
+<div>Je krijgt op deze manier een pad van de wortel naar de uiteindelijke knoop met de gezochte waarde.
+Dit pad kun je ook gebruiken voor het identificeren van de plek van de knoop in de boom.
+(Vgl. ook het pad van een bestand in het filesysteem.)</div></blockquote>
 <ul class="simple">
-<li>bijv. structuur van een boek (inhoudsopgave)</li>
-<li>organisatie van een bedrijf</li>
-<li>HTML/DOM</li>
+<li><a class="reference external" href="http://btv.melezinek.cz/binary-search-tree.html">visualisatie van een binaire zoekboom</a></li>
+<li><a class="reference external" href="https://nl.wikipedia.org/wiki/Binaire_zoekboom">Wikipedia: binaire zoekboom</a></li>
+</ul>
+<p><strong>Opdracht</strong></p>
+<p>Schrijf de het pad op waarme je de knoop met waarde 33 vindt. Idem, met waarde 43.</p>
+<p><strong>Opmerkingen</strong></p>
+<ul class="simple">
+<li>het zoekproces in een binaire zoekboom is alleen efficiënt als de boom redelijk <em>gebalanceerd</em> is:
+voor elke  subboom is dan het aantal knopen links en rechts ongeveer gelijk.
+De hoogte van de boom is dan ongeveer <span class="math notranslate nohighlight">\({^2}log(N)\)</span>, waarbij N het aantal knopen in de boom is.
+Voorbeeld: voor 1000 knopen is de hoogte dan ongeveer 10 (<span class="math notranslate nohighlight">\(2^{10} = 1024\)</span>).</li>
+</ul>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Te doen</p>
+<ul class="last simple">
+<li>algoritmen op (binaire zoek)bomen; naast zoeken bijv. afdrukken in infix.</li>
 </ul>
 </div>
-<div class="section" id="Ontleedbomen">
-<h2>Ontleedbomen<a class="headerlink" href="#Ontleedbomen" title="Permalink naar deze titel">¶</a></h2>
-<ul class="simple">
-<li>structuur van zin &lt;-&gt; betekenis</li>
-<li></li>
-</ul>
 </div>
-<div class="section" id="Lindenmayer-figuren">
-<h2>Lindenmayer figuren<a class="headerlink" href="#Lindenmayer-figuren" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="ontleedbomen">
+<h2>Ontleedbomen<a class="headerlink" href="#ontleedbomen" title="Permalink naar deze titel">¶</a></h2>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="_images/expressie-boom.png"><img alt="figuur: expressie-boom" src="_images/expressie-boom.png" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">Ontleedboom van de expressie <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">+</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">x</span></code></span></p>
+</div>
 </div>
 </div>
 
@@ -124,7 +244,7 @@
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
-      <a href="_sources/bomen.ipynb.txt"
+      <a href="_sources/bomen.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
